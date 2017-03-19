@@ -1,11 +1,4 @@
----
-title: "Yelp Challenge"
-author: "Daniel Voigt Godoy"
-date: "March 18, 2017"
-output: 
-  html_document:
-    self_contained: no
----
+# Yelp Dataset Challenge
 
 ## Summary
 
@@ -13,11 +6,11 @@ We developed classes to train two types of models using data of the [Yelp Datase
 
 The first class aims at training recommender systems based on Apache Spark's ALS. It uses ratings data for a particular city and category of business to train the model. Predictions come in the form of the a top N list of recommended items for a given user.
 
-You can find it at the [YelpRecommender](https://github.com/dvgodoy/yelp/blob/master/YelpRecommender.ipynb) notebook.
+You can find it at the [YelpRecommender](https://github.com/dvgodoy/YelpDatasetChallenge/blob/master/YelpRecommender.ipynb) notebook.
 
 The second class aims at training LSTM neural networks with Keras, TensorFlow and GloVe embeddings. It uses review's text data and one its associated features (stars rating, usefulness, coolness and funiness) to train the model. Predictions are made for the feature the model was trained for.
 
-You can find it at the [YelpLSTM](https://github.com/dvgodoy/yelp/blob/master/YelpLSTM.ipynb) notebook.
+You can find it at the [YelpLSTM](https://github.com/dvgodoy/YelpDatasetChallenge/blob/master/YelpLSTM.ipynb) notebook.
 
 We made available Docker containers for:
 - a recommender system for restaurants in Edinburgh;
@@ -42,7 +35,7 @@ There is a specific Docker container for each model: DockerRecommender and Docke
       - /list?user=<user id>&n=<top n>: returns the N top ratings given by the user
       - /recommend?user=<user id>&n=<top n>: returns the top N recommendations to the user
       
-Please refer to the [TestingRecommender](https://github.com/dvgodoy/yelp/blob/master/TestingRecommender.ipynb) notebook for an example of using the Recommender model.
+Please refer to the [TestingRecommender](https://github.com/dvgodoy/YelpDatasetChallenge/blob/master/TestingRecommender.ipynb) notebook for an example of using the Recommender model.
 
 You can also a Docker image directly:
 ```bash
@@ -61,7 +54,7 @@ docker run -p 8001:8001 -i -t dvgodoy/yelp-recommender:latest
       - /cool: predicts if a review is cool (1) or not (0)
       - funny: predicts if a review is funny (1) or not (0)
       
-Please refer to the [TestingLSTM](https://github.com/dvgodoy/yelp/blob/master/TestingLSTM.ipynb) notebook for an example of using the LSTM model.
+Please refer to the [TestingLSTM](https://github.com/dvgodoy/YelpDatasetChallenge/blob/master/TestingLSTM.ipynb) notebook for an example of using the LSTM model.
 
 You can also a Docker image directly:
 ```bash
@@ -74,8 +67,8 @@ In this section, we  will explore the characteristics of the business and review
 
 The information comes from the following notebooks:
 
-- [Businesses](https://github.com/dvgodoy/yelp/blob/master/ExploratoryBusinesses.ipynb)
-- [Reviews](https://github.com/dvgodoy/yelp/blob/master/ExploratoryReviews.ipynb)
+- [Businesses](https://github.com/dvgodoy/YelpDatasetChallenge/blob/master/ExploratoryBusinesses.ipynb)
+- [Reviews](https://github.com/dvgodoy/YelpDatasetChallenge/blob/master/ExploratoryReviews.ipynb)
 
 ### Businesses
 
